@@ -19,7 +19,7 @@ services:
     environment:
       - MONGO_URI=mongodb://mongo:27017/khoahoc  # MongoDB connection string for khoa-hoc service
   mongo:
-    image: mongo
+    image: mongo:5.0  # Use a specific MongoDB version for better compatibility
     ports:
       - '27017:27017'  # Exposes MongoDB default port 27017
 
