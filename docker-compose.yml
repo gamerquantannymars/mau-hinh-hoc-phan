@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  sinh-vien-service:
+    build: ./sinh-vien
+    ports:
+      - '3001:3000'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/sinhvien
+  giang-vien-service:
+    build: ./giang-vien
+    ports:
+      - '3002:3000'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/giangvien
+  khoa-hoc-service:
+    build: ./khoa-hoc
+    ports:
+      - '3003:3000'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/khoahoc
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
