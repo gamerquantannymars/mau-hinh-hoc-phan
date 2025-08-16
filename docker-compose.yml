@@ -3,22 +3,22 @@ services:
   sinh-vien-service:
     build: ./sinh-vien
     ports:
-      - '3001:3000'
+      - '3001:3000'  # Exposes port 3000 on the container as 3001 on the host
     environment:
-      - MONGO_URI=mongodb://mongo:27017/sinhvien
+      - MONGO_URI=mongodb://mongo:27017/sinhvien  # MongoDB connection string for sinh-vien service
   giang-vien-service:
     build: ./giang-vien
     ports:
-      - '3002:3000'
+      - '3002:3000'  # Exposes port 3000 on the container as 3002 on the host
     environment:
-      - MONGO_URI=mongodb://mongo:27017/giangvien
+      - MONGO_URI=mongodb://mongo:27017/giangvien  # MongoDB connection string for giang-vien service
   khoa-hoc-service:
     build: ./khoa-hoc
     ports:
-      - '3003:3000'
+      - '3003:3000'  # Exposes port 3000 on the container as 3003 on the host
     environment:
-      - MONGO_URI=mongodb://mongo:27017/khoahoc
+      - MONGO_URI=mongodb://mongo:27017/khoahoc  # MongoDB connection string for khoa-hoc service
   mongo:
     image: mongo
     ports:
-      - '27017:27017'
+      - '27017:27017'  # Exposes MongoDB default port 27017
