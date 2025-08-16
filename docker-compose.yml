@@ -24,3 +24,4 @@ services:
       - '27017:27017'  # Exposes MongoDB default port 27017
 
 # This docker-compose.yml file defines multiple services for a university management system.
+# Each service is built from its respective directory, exposing necessary ports and using MongoDB for storage.
